@@ -16,13 +16,13 @@ app.set('view engine', 'ejs');
 
 
 var db_config = {
-  host: 'localhost',
+  	host: 'localhost',
     user: 'root',
-    password: 'root',
-    database: 'example'
+    password: 'node',
+    database: 'CRUD'
 };
 
-var connection;
+global.connection;
 
 function handleDisconnect() {
   connection = mysql.createConnection(db_config); // Recreate the connection, since
