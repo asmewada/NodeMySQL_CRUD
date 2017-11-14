@@ -16,10 +16,10 @@ app.set('view engine', 'ejs');
 
 
 var db_config = {
-  	host: 'localhost',
-    user: 'root',
-    password: 'node',
-    database: 'CRUD'
+  	host: 'localhost', //host name
+    user: 'root', // please provide your database user name
+    password: '', // please provide your database password 
+    database: 'CRUD' // please provide your database name
 };
 
 global.connection;

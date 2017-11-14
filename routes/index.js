@@ -13,13 +13,13 @@ router.get('/', function(req, res, next) {
 	});
 });
 
-router.get(['/byId', '/byId/:id'], function(req, res, next){
+router.get('/byId', function(req, res, next){
 	connection.query('select * from users where id="'+req.param('id')+'"', function(err, data){
 		if (err) {
 			console.log(err);
 		}else{
 			console.log(data);
-			res.render('index', { title: 'NodeJS MySQL CRUD', data:data });
+			res.render('index', { title: 'NodeJS MySQL CRUD', data:data});
 		}
 	});
 });
@@ -46,7 +46,7 @@ router.post('/create', function(req, res, next){
 	}
 });
 
-router.get('/delete/:id', function(req, res, next){
+router.post('/delete', function(req, res, next){
 	connection.query('delete from users where id = "'+req.param('id')+'"', function(err, data){
 		if (err) {
 			console.log(err);
