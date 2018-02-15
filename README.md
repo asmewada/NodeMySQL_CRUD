@@ -10,11 +10,12 @@ get started:-
 npm install
 (3) create users table by running below command in mysql-
 CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `first_name` varchar(50) NOT NULL,
   `last_name` varchar(50) NOT NULL,
   `phone` varchar(15) NOT NULL,
-  `email` varchar(50) NOT NULL
+  `email` varchar(50) NOT NULL,
+    PRIMARY KEY(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 (4)run you project by-
 npm start
